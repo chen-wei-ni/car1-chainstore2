@@ -1,0 +1,70 @@
+﻿<html>
+<head>
+	<title>門市檢貨</title>
+	<meta name="viewport" content="width=device-width,  initial-scale=1">
+	<script src="js/jquery-3.5.1.js"></script>
+	<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.datepicker-ja.min.js"></script>
+	<link href="css/jquery-ui-timepicker-addon.css" rel="stylesheet">
+	<link href="jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="jqueryui/style.css">
+	<link href="css/mobile-2.css" rel="stylesheet">
+	 <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      showMonthAfterYear: true
+    });
+  });
+  </script>
+</head>
+<body>
+	<div class="page-2">
+		<div class="title">
+			<span>進貨系統</span>
+		</div>
+		<ol class="receipt">
+			<li class="margin-space">分店統編</li>
+			<li class="num">12606833</li>
+		</ol>
+		<ol class="receipt">
+			<li class="margin-space">廠商統編</li>
+			<li class="num">8989663</li>
+		</ol>
+		<div class="receipt">
+			<ol>
+				<li class="margin-space">發票號碼</li>
+				<li><input type="text" placeholder="輸入發票號碼" onfocus="this.placeholder=''"onblur="this.placeholder='輸入發票號碼'"></input></li>
+				<li class="margin-space receipt-cato">發票種類</li>
+				<li>
+					<select name="receipt">
+						<option>請選擇</option>
+						<option>三聯式統一發票</option>
+						<option>二聯式統一發票</option>
+						<option>特種統一發票</option>
+						<option>收銀機統一發票</option>
+						<option>電子發票</option>
+					</select>
+				</li>
+				<li class="margin-space receipt-date">發票日期</li>
+				<li><input type="text" id="datepicker" placeholder="選填日期"></li>			
+			</ol>
+			<ol>
+				<li class="margin-space">未稅金額</li>
+				<li><input type="text" placeholder="輸入" onfocus="this.placeholder=''"onblur="this.placeholder='輸入'"></li>
+			</ol>
+			<ol>
+				<li class="margin-space">稅金</li>
+				<li><input type="text" placeholder="輸入" onfocus="this.placeholder=''"onblur="this.placeholder='輸入'"></li>
+			</ol>
+			<ol class="sum">
+				<li class="sum1">小計</li>
+				<li class="sum2">5500</li><span>元</span>
+			</ol>
+		</div>
+		<p>
+			<input type="submit" value="儲存/印條碼" class="btn"></input>
+			<input type="button" value="儲存" class="btn">
+		</p>
+	</div>
+</body>
+</html>
